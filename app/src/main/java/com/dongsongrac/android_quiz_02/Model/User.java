@@ -1,22 +1,32 @@
 package com.dongsongrac.android_quiz_02.Model;
 
 public class User {
-    private String userName;
-    private String password;
+
     private String email;
+    private String password;
+    private String userName;
 
-    public User(String userName, String password, String email) {
-        this.userName = userName;
+    public User() {
+        this.email = null;
+        this.password = null;
+        this.userName = null;
+    }
+    public User(String password, String userName) {
         this.password = password;
-        this.email = email;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
         this.userName = userName;
+    }
+    public User(String email, String password, String userName) {
+        this.email = email;
+        this.password = password;
+        this.userName = userName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -27,11 +37,11 @@ public class User {
         this.password = password;
     }
 
-    public String getEmail() {
-        return email;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }
